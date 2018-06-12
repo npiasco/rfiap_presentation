@@ -1,0 +1,104 @@
+\documentclass[9pt]{beamer}
+
+\include{template}
+\usetheme[sectionpage=progressbar,block=fill]{metropolis}
+
+\RequirePackage{tikz}
+\usetikzlibrary{arrows,positioning,fit,calc,positioning,decorations.pathreplacing}
+\usepackage[utf8]{inputenc}
+\graphicspath{{images/}{images/theme/}}
+\usepackage{appendixnumberbeamer}
+\usepackage{tabularx}
+
+\usepackage{amsmath} % assumes amsmath package installed
+\usepackage{amssymb}  % assumes amsmath package installed
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+
+%\usepackage[numbers]{natbib} %Apa style for citation
+
+%% DONNES UTILES A LA PAGE DE TITRE ET AU PIED DE PAGE...
+
+\title[Multi-modal Visual Localization]{Apprentissage de modalités auxiliaires \\
+pour la localisation basée vision}
+\subtitle{\small{Enhancing Visual-Based Localization by Learning Appearance of Paired Modalities}}
+\author{Nathan Piasco}
+\institute{Congrès Reconnaissance des Formes, Image, Apprentissage et Perception 2018} % ON SE SERT DE INSTITUTE POUR METTER LE LIEUX DE LA CONF
+\date{26/06/2018}
+\titlegraphic{
+    \includegraphics[height=1.2cm]{logo/logo_le2i}
+	\hspace{0.1cm}
+    \includegraphics[height=1.2cm]{logo/logo_matis}
+    \hfill%
+    \includegraphics[height=1.2cm]{logo/ubfc}
+	\hspace{0.1cm}
+	\includegraphics[height=1.2cm]{logo/cnrs}	
+   	}
+
+\setbeamercolor{background canvas}{bg=white}
+
+\definecolor{IGNVert}{RGB}{148, 192,  22}
+\definecolor{IGNGris}{RGB}{112, 119, 122}
+\definecolor{IGNRouge}{RGB}{255, 100, 100}
+\usepackage{ragged2e}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+
+\defbeamertemplate*{footline}{}{%
+  \begin{beamercolorbox}[wd=\textwidth, sep=3ex]{footline}%
+	\hspace{1cm}
+    \includegraphics[height=0.6cm]{logo/logo_le2i}
+	\hspace{0.1cm}
+    \includegraphics[height=0.6cm]{logo/logo_matis}
+    \usebeamerfont{page number in head/foot}%
+    \usebeamertemplate*{frame footer}
+    \hfill%
+	\insertsection
+    \hfill%
+    \includegraphics[height=0.6cm]{logo/ubfc}
+	\hspace{0.1cm}
+	\includegraphics[height=0.6cm]{logo/cnrs}
+   	\hspace{1cm}
+    \usebeamertemplate*{frame numbering}
+  \end{beamercolorbox}%
+}
+
+\begin{document}
+
+\begin{frame}[plain,c]
+	\titlepage
+\end{frame}
+
+\begin{frame}[plain,c]
+	\tableofcontents
+\end{frame}
+
+\input{sections/introduction}
+\input{sections/related_work}
+\input{sections/side_information_learning}
+\input{sections/experiments}
+\input{sections/conclusion}
+
+\begin{frame}[plain,c]
+\centering
+\vfill
+\textbf{\huge{Thanks for your attention}}
+\vfill
+\huge{\textit{Question time}}
+\vfill
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Biblio
+\begin{frame}[allowframebreaks,plain]
+\frametitle{References}
+
+%\nocite{*}
+\bibliographystyle{apalike}
+\scriptsize{\bibliography{bib/mendeley,bib/others}}
+
+\end{frame}
+
+
+\end{document}
