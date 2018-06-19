@@ -6,23 +6,61 @@
 	
 	Visual Based Localization (\textbf{VBL}) aims to recover the pose or position of a visual input query according to a known reference~\cite{Piasco2017}.
 	\vfill	
-	%\includegraphics{vect/keys_comp_indirect.pdf}
-	Graph illustration VBL: Query $\rightarrow$ ? $\rightarrow$ Map
-	
+	\begin{minipage}{0.4\linewidth}
+	   \centering
+		\includegraphics[width=\linewidth]{images/intro_fig/dubrovnik_night_query.jpg}
+	\end{minipage}
+	$\rightarrow$ \textbf{?} $\rightarrow$
+	\begin{minipage}{0.4\linewidth}
+	   \centering
+		\includegraphics[width=\linewidth]{images/intro_fig/dubrovnik_map.jpg}
+	\end{minipage}	
 \end{frame}
 
-
 \begin{frame}{Visual Based Localization: Indirect methods}
-	
 	VBL can be solved by retrieving the closest geo-referenced candidate in the database.
 	\vfill
 	\only<1>{
-		Graph illustration VBL: Query $\rightarrow$ Geo-taged images $\rightarrow$ Map
+		\begin{minipage}{0.2\linewidth}
+		   \centering
+			\includegraphics[width=\linewidth]{images/intro_fig/dubrovnik_night_query.jpg}
+		\end{minipage}
+		$\rightarrow$
+		\begin{minipage}{0.75\linewidth}
+		   \centering
+			\begin{tabular}{c c c c}
+				\includegraphics[width=0.18\textwidth]{images/intro_fig/dataset/1.jpg} & 
+				\includegraphics[width=0.18\textwidth]{images/intro_fig/dataset/2.jpg} & 
+				\includegraphics[width=0.18\textwidth]{images/intro_fig/dataset/3.jpg} & 
+				\includegraphics[width=0.18\textwidth]{images/intro_fig/dataset/5.jpg} \\
+				\includegraphics[width=0.18\textwidth]{images/intro_fig/dataset/6.jpg} &
+				\multicolumn{3}{c}{	
+					\multirow{3}{*}{
+						\includegraphics[width=0.40\textwidth]{images/intro_fig/dubrovnik_map.jpg}
+					}
+				} \\
+				\includegraphics[width=0.18\textwidth]{images/intro_fig/dataset/7.jpg} \\
+				\includegraphics[width=0.18\textwidth]{images/intro_fig/dataset/8.jpg} \\
+			\end{tabular}
+		\end{minipage}
 	}
-	\only<2>{	
-		Graph illustration VBL: Query $\rightarrow$ Closest Geo-taged image $\rightarrow$ Map location
+	\only<2>{
+		\centering
+		\begin{minipage}{0.3\linewidth}
+			\centering		
+			\includegraphics[width=\linewidth]{images/intro_fig/dubrovnik_night_query.jpg}
+		\end{minipage}
+		\hfill $\rightarrow$ 	\hfill
+		\begin{minipage}{0.3\linewidth}
+			\centering
+			\includegraphics[width=0.8\textwidth]{images/intro_fig/dataset/8.jpg}
+		\end{minipage}
+	    \hfill $\rightarrow$ 	\hfill
+		\begin{minipage}{0.3\linewidth}
+			\centering
+			\includegraphics[width=\linewidth]{images/intro_fig/dubrovnik_map_marked.jpg}
+		\end{minipage}
 	}
-	
 \end{frame}
 
 
