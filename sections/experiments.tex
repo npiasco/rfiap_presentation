@@ -1,21 +1,28 @@
 \section{Experiments}
 \begin{frame}{Robotcar dataset}
 	\begin{figure}[t]
-		\centering
-		
+		\centering	
 		\only<1>{\includegraphics[width=0.8\linewidth]{images/map/map.png}  }
 		\only<2>{
-		\includegraphics[width=0.19\linewidth]{images/ex_query/query0.jpg}\hfill
-		\includegraphics[width=0.23\linewidth]{images/ex_query/query1.jpg}\hfill
-		\includegraphics[width=0.19\linewidth]{images/ex_query/query2.jpg}\hfill
-		\includegraphics[width=0.19\linewidth]{images/ex_query/query3.jpg}\hfill
-		\includegraphics[width=0.19\linewidth]{images/ex_query/query4.jpg}
+			\begin{minipage}{0.2\linewidth}
+				\centering
+				Query
+				\vspace{1cm}
+				
+				Closest example in the database			
+			\end{minipage}
+			\hfill
+			\begin{minipage}{0.79\linewidth}
+				\includegraphics[width=0.24\linewidth]{images/ex_query/query0.jpg}\hfill
+				\includegraphics[width=0.24\linewidth]{images/ex_query/query2.jpg}\hfill
+				\includegraphics[width=0.24\linewidth]{images/ex_query/query3.jpg}\hfill
+				\includegraphics[width=0.24\linewidth]{images/ex_query/query4.jpg}
 			
-		\includegraphics[width=0.19\linewidth]{images/ex_query/dataset0.jpg}\hfill
-		\includegraphics[width=0.23\linewidth]{images/ex_query/dataset1.jpg}\hfill
-		\includegraphics[width=0.19\linewidth]{images/ex_query/dataset2.jpg}\hfill
-		\includegraphics[width=0.19\linewidth]{images/ex_query/dataset3.jpg}\hfill
-		\includegraphics[width=0.19\linewidth]{images/ex_query/dataset4.jpg}
+				\includegraphics[width=0.24\linewidth]{images/ex_query/dataset0.jpg}\hfill
+				\includegraphics[width=0.24\linewidth]{images/ex_query/dataset2.jpg}\hfill
+				\includegraphics[width=0.24\linewidth]{images/ex_query/dataset3.jpg}\hfill
+				\includegraphics[width=0.24\linewidth]{images/ex_query/dataset4.jpg}
+			\end{minipage}
 		}
 	\end{figure}
 	
@@ -29,7 +36,7 @@
 			\centering
 			\begin{footnotesize}
 			\begin{tabularx}{\linewidth}{Y Y Y}
-				\textbf{Image}	  & \textbf{Points cloud} 			& \uncover<2>{\textbf{Dense depth map}}
+				\textbf{Image}	  & \textbf{Points cloud} 			& \uncover<2>{\textbf{Dense depth map}} \\
 			\end{tabularx}
 			\end{footnotesize}
 			\includegraphics[width=0.33\linewidth]{images/dense_map_creation/image0.jpg}\hfill
@@ -66,7 +73,7 @@
 		Main modality 
 		\vspace{1.5cm}		
 		
-		Side modality
+		Ground truth side modality
 		\vspace{1.5cm}
 		
 		Reconstructed side modality
@@ -78,4 +85,21 @@
 		\vfill		
 		\includegraphics[width=0.95\linewidth]{images/visual_results/reconstructed_maps.png}
 	\end{minipage}	
+\end{frame}
+
+\begin{frame}{Results - Conclusion}
+	Comparison with state of the art method:
+	\vfill
+	\begin{tabular}{c | c | c | c}
+						&	Improvement over 	& 	\multirow{2}{*}{Size} 	& 	\multirow{2}{*}{Training steps}			 \\
+						&	images-only method  	&  	&  \\
+		\hline				
+		\hline						
+		Hallucination	& 	\uncover<2->{\multirow{2}{*}{\textbf{Yes}}}			& \uncover<3->{\multirow{2}{*}{2x}}	& \uncover<4>{\multirow{2}{*}{3 steps}}	 \\
+		\cite{Hoffman2016} & & & \\
+		\hline						
+		BU-TF	& \uncover<2->{\multirow{2}{*}{\textbf{Yes}}}			& \uncover<3->{\multirow{2}{*}{\textbf{1.4x}}}	& \uncover<4>{\multirow{2}{*}{\textbf{2 steps}}} \\
+		(Our proposal) & & & \\
+	\end{tabular}
+	\vfill
 \end{frame}

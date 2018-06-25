@@ -3,7 +3,6 @@
 \label{sec:related_work}
 
 \begin{frame}{Building a deep image descriptor}
-
 	Fully connected part of a the network is dropped and pooling is done on the last convolutional response:
 	\vfill
 	\begin{figure}
@@ -11,11 +10,10 @@
 		\includegraphics[width=0.8\linewidth]{vect/MAC.eps}			
 	\end{figure}
 	\vfill
-	More complex aggregation methods exist: NetVLAD~\cite{Arandjelovic2017}, RMAC...
+	More complex aggregation methods exist: NetVLAD~\cite{Arandjelovic2017}, RMAC~\cite{Radenovic2016}...
 \end{frame}
 
 \begin{frame}{Learning a deep image descriptor}
-
 	\begin{minipage}{0.49\linewidth}
 		\begin{minipage}[c]{0.26\linewidth}
 			\uncover<1->{\includegraphics[width=\linewidth]{images/ex_query/anchor.png}}
@@ -28,7 +26,7 @@
 			\vfill
 			\begin{figure}
 				\centering
-				\includegraphics[width=\linewidth]{vect/triplet_loss.eps}			
+				\includegraphics[width=\linewidth]{vect/triplet_loss.eps}
 			\end{figure}
 			\vfill
 		\end{minipage}
@@ -56,26 +54,19 @@
 
 
 \begin{frame}{Learning with side modality}
-	\vfill
-	Hallucination architecture from~\cite{Hoffman2016}, \textbf{never been applied to image description and VBL}.
-	\vfill
+	Hallucination architecture from~\cite{Hoffman2016} for objects classification, \textbf{never applied to image description and VBL}.
 	\begin{figure}
 		\centering
 		\only<1>{
-			\includegraphics[width=0.70\linewidth, clip=true, trim = 0 0.5cm 8cm 0]{vect/training.pdf}			
+			\includegraphics[width=0.70\linewidth, clip=true, trim = 0 0.5cm 8cm 0]{vect/training.pdf}		
 		}
 		\uncover<2>{
-			\includegraphics[width=0.48\linewidth, clip=true, trim = 0 0.5cm 8cm 0]{vect/training.pdf}			
+			\includegraphics[width=0.48\linewidth, clip=true, trim = 0 0.5cm 8cm 0]{vect/training.pdf}\hfill
 			\includegraphics[width=0.48\linewidth, clip=true, trim = 0 0.5cm 7.2cm 0]{vect/testing.pdf}
 		}
 	\end{figure}
-	\only<1>{
-		\centering
-		Training
-	}
 	\only<2>{
 		\centering
 		\hspace{3.5cm} Deployment
 	}	
-	\vfill
 \end{frame}
